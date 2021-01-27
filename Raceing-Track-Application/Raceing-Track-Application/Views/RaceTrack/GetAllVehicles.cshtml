@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Race.Track.Models.RacingVehicleDetails>
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Select the vehicle for race track.</h2>
+<p>
+    @Html.ActionLink("Add New Vehicle", "GetAllVehicles")
+</p>
+<p style="color:red">
+    Note: Only 5 vehicle can be set on track.
+</p>
+<table id="DataTable" style="width:100%;" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Vehichle Name</th>
+            <th>Vehicle Image</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Description</td>
+                <td>
+                    <img src="@Url.Content(item.VehichleImagePath)" alt="Image" height="100px" width="100px" />
+                </td>
+                @if (!item.IsSetToRacingTrack)
+                {
+                    <td>
+                        <a href="../RaceTrack/SetVehicleOnTrack/@item.Id.ToString()">Set on track</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a href="../RaceTrack/RemoveVehicleFromTrack/@item.Id.ToString()">Remove from track</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

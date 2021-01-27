@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Race.Track.Models.RacingVehicleDetails>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Selected Vehicles On Race Track</h2>
+
+<p>
+    @Html.ActionLink("Manage Vehicles on Track", "GetAllVehicles")
+</p>
+<table id="DataTable" style="width:100%;" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Vehichle Name</th>
+            <th>Vehicle Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Description</td>
+                <td>
+                    <img src="@Url.Content(item.VehichleImagePath)" alt="Image" height="100px" width="100px" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
