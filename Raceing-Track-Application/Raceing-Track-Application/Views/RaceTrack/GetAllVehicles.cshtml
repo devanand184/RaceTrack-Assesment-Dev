@@ -6,6 +6,7 @@
     int index = 1;
     TempData.Keep("ExceededNumberOfVehiclesOnTrackMessage");
     string msg = Convert.ToString(TempData["ExceededNumberOfVehiclesOnTrackMessage"]);
+    TempData["ExceededNumberOfVehiclesOnTrackMessage"] = null;
 }
 <h2>Select the vehicle for race track.</h2>
 <p>
