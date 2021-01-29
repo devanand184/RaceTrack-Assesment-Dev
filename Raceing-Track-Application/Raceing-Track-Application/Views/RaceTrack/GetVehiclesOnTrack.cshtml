@@ -3,6 +3,9 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    int index = 1;
+    int totalVehiclesCanBeOnTrack = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["TotalVehiclesCanBeOnTrack"]);
+    
 }
 
 <h2>Selected Vehicles On Race Track</h2>
@@ -13,6 +16,7 @@
 <table id="DataTable" style="width:100%;" class="table table-bordered">
     <thead>
         <tr>
+            <th>#</th>
             <th>Vehichle Name</th>
             <th>Vehicle Image</th>
         </tr>
@@ -20,12 +24,16 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>@item.Description</td>
-                <td>
-                    <img src="@Url.Content(item.VehichleImagePath)" alt="Image" height="100px" width="100px" />
-                </td>
-            </tr>
+            if (index <= totalVehiclesCanBeOnTrack)
+            {
+                <tr>
+                    <td> @index @{index++;} </td>
+                    <td>@item.Description</td>
+                    <td>
+                        <img src="@Url.Content(item.VehichleImagePath)" alt="Image" height="100px" width="100px" />
+                    </td>
+                </tr>
+            }
         }
     </tbody>
 </table>

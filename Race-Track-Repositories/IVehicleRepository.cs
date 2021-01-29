@@ -10,7 +10,7 @@ namespace Race.Track.Repositories
     {
         bool AddVehicle(RacingVehicleDetails vehicleDetails);
 
-        bool SaveVehiclesOnRacingTrack(RacingVehicleDetails racingVehicleDetails);
+        bool SaveVehiclesSelection(RacingVehicleDetails racingVehicleDetails);
 
         IEnumerable<RacingVehicleDetails> GetAllVehicles();
         IEnumerable<RacingVehicleDetails> GetVehiclesOnRacingTrack();

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Others\\RaceingTrack-Application-New\\Racing-Track-Test\\Racing-Track-Test.csproj": {}
+    "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Racing-Track-Test\\Racing-Track-Test.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Entity\\Raceing-Track-Entity.csproj": {
+    "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Entity\\Raceing-Track-Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Entity\\Raceing-Track-Entity.csproj",
+        "projectUniqueName": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Entity\\Raceing-Track-Entity.csproj",
         "projectName": "Raceing-Track-Entity",
-        "projectPath": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Entity\\Raceing-Track-Entity.csproj",
+        "projectPath": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Entity\\Raceing-Track-Entity.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Models\\Raceing-Track-Models.csproj": {
-                "projectPath": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Models\\Raceing-Track-Models.csproj"
+              "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Models\\Raceing-Track-Models.csproj": {
+                "projectPath": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Models\\Raceing-Track-Models.csproj"
               }
             }
           }
@@ -24,31 +24,31 @@
         "net472": {}
       }
     },
-    "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Models\\Raceing-Track-Models.csproj": {
+    "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Models\\Raceing-Track-Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Models\\Raceing-Track-Models.csproj",
+        "projectUniqueName": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Models\\Raceing-Track-Models.csproj",
         "projectName": "Raceing-Track-Models",
-        "projectPath": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Models\\Raceing-Track-Models.csproj"
+        "projectPath": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Models\\Raceing-Track-Models.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj": {
+    "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj",
+        "projectUniqueName": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj",
         "projectName": "Raceing-Track-Repositories",
-        "projectPath": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj",
+        "projectPath": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Entity\\Raceing-Track-Entity.csproj": {
-                "projectPath": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Entity\\Raceing-Track-Entity.csproj"
+              "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Entity\\Raceing-Track-Entity.csproj": {
+                "projectPath": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Entity\\Raceing-Track-Entity.csproj"
               },
-              "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Models\\Raceing-Track-Models.csproj": {
-                "projectPath": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Models\\Raceing-Track-Models.csproj"
+              "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Models\\Raceing-Track-Models.csproj": {
+                "projectPath": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Models\\Raceing-Track-Models.csproj"
               }
             }
           }
@@ -58,14 +58,14 @@
         "net472": {}
       }
     },
-    "C:\\Projects\\Others\\RaceingTrack-Application-New\\Racing-Track-Test\\Racing-Track-Test.csproj": {
+    "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Racing-Track-Test\\Racing-Track-Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Racing-Track-Test\\Racing-Track-Test.csproj",
+        "projectUniqueName": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Racing-Track-Test\\Racing-Track-Test.csproj",
         "projectName": "Racing-Track-Test",
-        "projectPath": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Racing-Track-Test\\Racing-Track-Test.csproj",
+        "projectPath": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Racing-Track-Test\\Racing-Track-Test.csproj",
         "packagesPath": "C:\\Users\\devanand.panday\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Racing-Track-Test\\obj\\",
+        "outputPath": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Racing-Track-Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -84,8 +84,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj": {
-                "projectPath": "C:\\Projects\\Others\\RaceingTrack-Application-New\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj"
+              "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj": {
+                "projectPath": "C:\\Projects\\Others\\Assessment-Dev-Testing\\RaceTrack-Assesment-Dev\\Race-Track-Repositories\\Raceing-Track-Repositories.csproj"
               }
             }
           }

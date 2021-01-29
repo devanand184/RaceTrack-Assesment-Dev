@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Race.Track.Models
@@ -7,6 +8,7 @@ namespace Race.Track.Models
     public class RacingVehicleDetails
     {
         public Guid Id { get; set; }
+
         public string Description { get; set; }
         public int Senstivity { get; set; }
         public int Acceleration { get; set; }

@@ -3,3 +3,7 @@ C:\Projects\Others\RaceingTrack-Application-New\Race-Track-Models\bin\Debug\Race
 C:\Projects\Others\RaceingTrack-Application-New\Race-Track-Models\obj\Debug\Race-Track-Models.dll
 C:\Projects\Others\RaceingTrack-Application-New\Race-Track-Models\obj\Debug\Race-Track-Models.pdb
 C:\Projects\Others\RaceingTrack-Application-New\Race-Track-Models\obj\Debug\Raceing-Track-Models.csprojAssemblyReference.cache
+C:\Projects\Others\Assessment-Dev-Testing\RaceTrack-Assesment-Dev\Race-Track-Models\bin\Debug\Race-Track-Models.dll
+C:\Projects\Others\Assessment-Dev-Testing\RaceTrack-Assesment-Dev\Race-Track-Models\bin\Debug\Race-Track-Models.pdb
+C:\Projects\Others\Assessment-Dev-Testing\RaceTrack-Assesment-Dev\Race-Track-Models\obj\Debug\Race-Track-Models.dll
+C:\Projects\Others\Assessment-Dev-Testing\RaceTrack-Assesment-Dev\Race-Track-Models\obj\Debug\Race-Track-Models.pdb

@@ -1,5 +1,5 @@
-﻿Select * From VehicleDetails;
-Select * From RacingVehicleDetails where Id='8bd90e7b-0d37-4611-a715-1bf311360bd3';
+﻿
+Select * From RacingVehicleDetails order by Description 
 
 Update RacingVehicleDetails Set IsSetToRacingTrack=1;
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,11 +42,11 @@ namespace Race.Track.Repositories
             return _dbContext.RacingVehicleDetails;
         }
 
-        public bool SaveVehiclesOnRacingTrack(RacingVehicleDetails racingVehicleDetails)
+        public bool SaveVehiclesSelection(RacingVehicleDetails racingVehicleDetails)
         {
             try
             {
-                _dbContext.RacingVehicleDetails.Attach(racingVehicleDetails);
+                _dbContext.Entry(racingVehicleDetails).State = EntityState.Modified;
                 _dbContext.SaveChanges();
 
                 return true;
