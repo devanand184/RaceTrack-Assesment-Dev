@@ -1,76 +1,134 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Mvc;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
+using Race.Track.Models;
 using Race.Track.Repositories;
+using Raceing.Track.Application.Controllers;
 using Raceing.Track.Entity;
-using System;
-using Xunit;
 
 namespace Racing_Track_Test
 {
+    [TestClass]
     public class RacingTrackUnitTest
     {
-        [Fact]
-        public void ShouldAddVehicle()
+        IVehicleRepository _vehicleRepository;
+        ICarRacingDBContext _mockedCarRaceingDBContext;
+        IList<RacingVehicleDetails> _mockedVehiclesOnRaceTrack;
+
+        private void Setup()
         {
-            //Arrange
-                    //-- Use here mock object to avoid actual db hit.
-                    //-- Arrange all the required mocked object here.
-            //Act
-                    //- Call the actual method to test and use callback function of moq to verify the result
-            //Assert
+            CarRaceingDBContext carRaceingDBContext = new CarRaceingDBContext();
+            _mockedVehiclesOnRaceTrack = new List<RacingVehicleDetails>()
+            {
+                new RacingVehicleDetails()
+                {
+                    Acceleration = 1,
+                    Breaking = 1,
+                    CanLift = 5,
+                    Description = "Vehicle-Test-1",
+                    GearBox = 1,
+                    HandBreak = true,
+                    HorizonTilt = 1,
+                    Id = Guid.NewGuid(),
+                    IsSetToRacingTrack = true,
+                    Linearity = 1,
+                    Senstivity = 1,
+                    TowStrap = true
+                },
+                new RacingVehicleDetails()
+                {
+                    Acceleration = 1,
+                    Breaking = 1,
+                    CanLift = 5,
+                    Description = "Vehicle-Test-2",
+                    GearBox = 1,
+                    HandBreak = true,
+                    HorizonTilt = 1,
+                    Id = Guid.NewGuid(),
+                    IsSetToRacingTrack = false,
+                    Linearity = 1,
+                    Senstivity = 1,
+                    TowStrap = true
+                }
+            };
+
+            _mockedCarRaceingDBContext = carRaceingDBContext.GetMockContext(_mockedVehiclesOnRaceTrack);
+
+            _vehicleRepository = new VehicleRepository(_mockedCarRaceingDBContext);
         }
 
-        [Fact]
-        public void ShouldNotAddVehicle()
+        [TestMethod]
+        public void Should_GetVehicleOnTrack()
         {
             //Arrange
-            //-- Use here mock object to avoid actual db hit.
-            //-- Arrange all the required mocked object here.
+            Setup();
+
             //Act
-            //- Call the actual method to test and use callback function of moq to verify the result
+            var vehiclesOnTrack = _vehicleRepository.GetVehiclesOnRacingTrack();
+
             //Assert
+            Assert.IsTrue(vehiclesOnTrack.Any());
         }
 
-        [Fact]
-        public void ShouldReturnAllVehicles()
+        [TestMethod]
+        public void Should_GetAllVehiclesk()
         {
             //Arrange
-            //-- Use here mock object to avoid actual db hit.
-            //-- Arrange all the required mocked object here.
+            Setup();
+
             //Act
-            //- Call the actual method to test and use callback function of moq to verify the result
+            var vehiclesOnTrack = _vehicleRepository.GetAllVehicles();
+
             //Assert
+            Assert.IsTrue(vehiclesOnTrack.Count() > 0);
         }
 
-        [Fact]
-        public void ShouldNotReturnAllVehicles()
+        [TestMethod]
+        public void Should_Add_Vehicle()
         {
             //Arrange
-            //-- Use here mock object to avoid actual db hit.
-            //-- Arrange all the required mocked object here.
+            Setup();
+
             //Act
-            //- Call the actual method to test and use callback function of moq to verify the result
+            var isAdded = _vehicleRepository.AddVehicle(_mockedVehiclesOnRaceTrack[0]);
+
             //Assert
+            Assert.IsTrue(isAdded);
         }
 
-        [Fact]
-        public void ShouldReturnVehiclesOnRaceTrack()
+        [TestMethod]
+        public void Should_Set_Vehicle_OnTrack()
         {
             //Arrange
-            //-- Use here mock object to avoid actual db hit.
-            //-- Arrange all the required mocked object here.
+            Setup();
+
             //Act
-            //- Call the actual method to test and use callback function of moq to verify the result
+            var mockedVehicleToSet = _mockedVehiclesOnRaceTrack[0];
+            mockedVehicleToSet.IsSetToRacingTrack = false;
+
+            var isSet = _vehicleRepository.SaveVehiclesSelection(mockedVehicleToSet);
+
             //Assert
+            Assert.IsTrue(isSet);
         }
 
-        [Fact]
-        public void ShouldNotReturnVehiclesOnRaceTrack()
+        [TestMethod]
+        public void Should_Remove_Vehicle_OnTrack()
         {
             //Arrange
-            //-- Use here mock object to avoid actual db hit.
-            //-- Arrange all the required mocked object here.
+            Setup();
+
             //Act
-            //- Call the actual method to test and use callback function of moq to verify the result
+            var mockedVehicleToSet = _mockedVehiclesOnRaceTrack[0];
+            mockedVehicleToSet.IsSetToRacingTrack = true;
+
+            var isRemoved = _vehicleRepository.SaveVehiclesSelection(mockedVehicleToSet);
+
             //Assert
+            Assert.IsTrue(isRemoved);
         }
     }
 }

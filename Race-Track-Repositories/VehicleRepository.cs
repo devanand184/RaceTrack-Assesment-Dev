@@ -51,7 +51,7 @@ namespace Race.Track.Repositories
 
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
                 return false;
             }
