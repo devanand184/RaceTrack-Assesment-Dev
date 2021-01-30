@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raceing-Track-Entity", "..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raceing-Track-Models", "..\Race-Track-Models\Raceing-Track-Models.csproj", "{660AC6EA-5226-4482-8533-513834206F14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Racing-Track-Test", "..\Racing-Track-Test\Racing-Track-Test.csproj", "{2CF98652-BF33-46B6-B6E5-7992EEB8C74A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Racing-Track-Test", "..\Racing-Track-Test\Racing-Track-Test.csproj", "{7C0AB1BC-5670-4721-A191-ED22915E1F57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{660AC6EA-5226-4482-8533-513834206F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{660AC6EA-5226-4482-8533-513834206F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{660AC6EA-5226-4482-8533-513834206F14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CF98652-BF33-46B6-B6E5-7992EEB8C74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CF98652-BF33-46B6-B6E5-7992EEB8C74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CF98652-BF33-46B6-B6E5-7992EEB8C74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CF98652-BF33-46B6-B6E5-7992EEB8C74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C0AB1BC-5670-4721-A191-ED22915E1F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C0AB1BC-5670-4721-A191-ED22915E1F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C0AB1BC-5670-4721-A191-ED22915E1F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0AB1BC-5670-4721-A191-ED22915E1F57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
