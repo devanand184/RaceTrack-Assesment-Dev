@@ -1,22 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
-using Race.Track.Models;
-using Race.Track.Repositories;
-using Raceing.Track.Application.Controllers;
-using Raceing.Track.Entity;
-
-namespace Racing_Track_Test
+﻿namespace Racing_Track_Test
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Moq;
+    using Race.Track.Models;
+    using Race.Track.Repositories;
+    using Raceing.Track.Entity;
+    using Raceing.Track.Repositories.DBOperation;
+
     [TestClass]
     public class RacingTrackUnitTest
     {
-        IVehicleRepository _vehicleRepository;
-        ICarRacingDBContext _mockedCarRaceingDBContext;
-        IList<RacingVehicleDetails> _mockedVehiclesOnRaceTrack;
+        #region local
+
+        private IVehicleRepository _vehicleRepository;
+        private ICarRacingDBContext _mockedCarRaceingDBContext;
+        private Mock<IDbOperation<RacingVehicleDetails>> _dbOperation;
+        private IList<RacingVehicleDetails> _mockedVehiclesOnRaceTrack;
+
+        #endregion
 
         private void Setup()
         {
@@ -55,13 +59,18 @@ namespace Racing_Track_Test
                 }
             };
 
+            //Get mocked object
             _mockedCarRaceingDBContext = carRaceingDBContext.GetMockContext(_mockedVehiclesOnRaceTrack);
 
-            _vehicleRepository = new VehicleRepository(_mockedCarRaceingDBContext);
+            _dbOperation = new Mock<IDbOperation<RacingVehicleDetails>>();
+
+            _dbOperation.Setup(d => d.Get()).Returns(() => _mockedCarRaceingDBContext.RacingVehicleDetails);
+
+            _vehicleRepository = new VehicleRepository(_mockedCarRaceingDBContext, _dbOperation.Object);
         }
 
         [TestMethod]
-        public void Should_GetVehicleOnTrack()
+        public void Should_Get_VehicleOnTrack()
         {
             //Arrange
             Setup();
@@ -74,7 +83,7 @@ namespace Racing_Track_Test
         }
 
         [TestMethod]
-        public void Should_GetAllVehiclesk()
+        public void Should_Get_AllVehiclesk()
         {
             //Arrange
             Setup();
@@ -100,7 +109,7 @@ namespace Racing_Track_Test
         }
 
         [TestMethod]
-        public void Should_Set_Vehicle_OnTrack()
+        public void Should_Set_VehicleOnTrack()
         {
             //Arrange
             Setup();
@@ -116,7 +125,7 @@ namespace Racing_Track_Test
         }
 
         [TestMethod]
-        public void Should_Remove_Vehicle_OnTrack()
+        public void Should_Remove_VehicleOnTrack()
         {
             //Arrange
             Setup();

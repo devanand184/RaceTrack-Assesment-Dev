@@ -1,61 +1,66 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Race.Track.Models;
-using Raceing.Track.Entity;
-
-namespace Race.Track.Repositories
+﻿namespace Race.Track.Repositories
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Race.Track.Models;
+    using Raceing.Track.Entity;
+    using Raceing.Track.Repositories.DBOperation;
+
     public class VehicleRepository : IVehicleRepository, IDisposable
     {
         private readonly ICarRacingDBContext _dbContext;
+        private readonly IDbOperation<RacingVehicleDetails> _dbOperation;
 
-        public VehicleRepository(ICarRacingDBContext dbContext)
+        public VehicleRepository(ICarRacingDBContext dbContext, IDbOperation<RacingVehicleDetails> dbOperation)
         {
             _dbContext = dbContext;
+            _dbOperation = dbOperation;
         }
 
         public bool AddVehicle(RacingVehicleDetails vehicleDetails)
         {
             vehicleDetails.Id = Guid.NewGuid();
-            _dbContext.RacingVehicleDetails.Add(vehicleDetails);
-            _dbContext.SaveChanges();
-
+            try
+            {
+                _dbOperation.Insert(vehicleDetails);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return true;
         }
 
         public RacingVehicleDetails GetVehicleById(string id)
         {
-            return _dbContext.RacingVehicleDetails.FirstOrDefault(p => p.Id.ToString() == id);
+           return _dbOperation.Get()
+                .FirstOrDefault(p => p.Id.ToString() == id);
         }
 
         public IEnumerable<RacingVehicleDetails> GetVehiclesOnRacingTrack()
         {
-            return _dbContext.RacingVehicleDetails.Where(v => v.IsSetToRacingTrack);
+            return _dbOperation.Get()
+                .Where(v => v.IsSetToRacingTrack);
         }
 
         public IEnumerable<RacingVehicleDetails> GetAllVehicles()
         {
-            return _dbContext.RacingVehicleDetails;
+            return _dbOperation.Get();
         }
 
         public bool SaveVehiclesSelection(RacingVehicleDetails racingVehicleDetails)
         {
             try
             {
-                _dbContext.Entry(racingVehicleDetails).State = EntityState.Modified;
-                _dbContext.SaveChanges();
+                _dbOperation.Update(racingVehicleDetails);
 
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return false;
             }
-
         }
 
         public void Dispose()

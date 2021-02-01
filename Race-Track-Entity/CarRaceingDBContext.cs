@@ -1,15 +1,12 @@
-﻿using Moq;
-using Race.Track.Models;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Raceing.Track.Entity
+﻿namespace Raceing.Track.Entity
 {
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Conventions;
+    using System.Linq;
+    using Moq;
+    using Race.Track.Models;
+
     public class CarRaceingDBContext : DbContext, ICarRacingDBContext
     {
         /// <summary>

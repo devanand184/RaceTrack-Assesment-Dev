@@ -1,13 +1,11 @@
-﻿using Race.Track.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace Raceing.Track.Application.Controllers
+﻿namespace Raceing.Track.Application.Controllers
 {
+    using System;
+    using System.Configuration;
+    using System.Linq;
+    using System.Web.Mvc;
+    using Race.Track.Repositories;
+
     public class RaceTrackController : Controller
     {
         private readonly IVehicleRepository _vehicleRepository;
@@ -42,7 +40,7 @@ namespace Raceing.Track.Application.Controllers
                 var vehiclesAlreadyOnTrack = _vehicleRepository.GetVehiclesOnRacingTrack();
                 if (vehiclesAlreadyOnTrack != null && vehiclesAlreadyOnTrack.Count() > _totalVehiclesCanBeOnTrack)
                 {
-                    TempData["ExceededNumberOfVehiclesOnTrackMessage"]= $"You can not select more than {_totalVehiclesCanBeOnTrack} vehicles on track, first remove anyone and then try.";
+                    TempData["ExceededNumberOfVehiclesOnTrackMessage"] = $"You can not select more than {_totalVehiclesCanBeOnTrack} vehicles on track, first remove anyone and then try.";
                 }
                 else
                 {

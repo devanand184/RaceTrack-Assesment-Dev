@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using Race.Track.Models;
-using Race.Track.Repositories;
-using Raceing.Track.Entity;
-
-namespace Raceing.Track.Application.Controllers
+﻿namespace Raceing.Track.Application.Controllers
 {
+    using System;
+    using System.Web.Mvc;
+    using Race.Track.Models;
+    using Race.Track.Repositories;
+
     public class VehicleController : Controller
     {
         private readonly IVehicleRepository _vehicleRepository;

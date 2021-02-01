@@ -48,3 +48,4 @@ C:\Projects\Others\Assessment-Dev-Testing\RaceTrack-Assesment-Dev\Race-Track-Ent
 C:\Projects\Others\Assessment-Dev-Testing\RaceTrack-Assesment-Dev\Race-Track-Entity\obj\Debug\Raceing-Track-Entity.csproj.CopyComplete
 C:\Projects\Others\Assessment-Dev-Testing\RaceTrack-Assesment-Dev\Race-Track-Entity\obj\Debug\Race-Track-Entity.dll
 C:\Projects\Others\Assessment-Dev-Testing\RaceTrack-Assesment-Dev\Race-Track-Entity\obj\Debug\Race-Track-Entity.pdb
+C:\Projects\Others\Assessment-Dev-Testing\RaceTrack-Assesment-Dev\Race-Track-Entity\obj\Debug\Raceing.Track.Entity.Migrations.PropertyChangesInRacingVehicleDetails.resources

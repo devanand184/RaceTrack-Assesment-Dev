@@ -78,6 +78,10 @@
     <Compile Include="Migrations\202101270955199_RemvedVhicleDetailsTable.designer.cs">
       <DependentUpon>202101270955199_RemvedVhicleDetailsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102010756220_PropertyChangesInRacingVehicleDetails.cs" />
+    <Compile Include="Migrations\202102010756220_PropertyChangesInRacingVehicleDetails.designer.cs">
+      <DependentUpon>202102010756220_PropertyChangesInRacingVehicleDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101270955199_RemvedVhicleDetailsTable.resx">
       <DependentUpon>202101270955199_RemvedVhicleDetailsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102010756220_PropertyChangesInRacingVehicleDetails.resx">
+      <DependentUpon>202102010756220_PropertyChangesInRacingVehicleDetails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
